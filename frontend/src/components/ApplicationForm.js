@@ -26,17 +26,22 @@ export default function ApplicationForm() {
       product: product
     }
     //npm i axios
-    axios.post('http://localhost:4001/industrials/post', industrialData)
+    axios.post('https://crud-elpu.onrender.com/industrials/post', industrialData)
       .then(res => console.log(res))
       .catch(err => console.log(err))
 
     //alert
     alert('Sumitted successfully')
-    window.location.reload()
-  }
-  const handleClear=(e)=>{
-    alert('Form Cleared')
-    window.location.reload()
+
+    setSno('')
+    setName('')
+    setDoorno('')
+    setStreet('')
+    setArea('')
+    setCity('')
+    setPincode('')
+    setMobile('')
+    setProduct('')
   }
   return (
     <div>

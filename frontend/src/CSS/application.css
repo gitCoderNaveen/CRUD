@@ -83,4 +83,8 @@ form{
     .container {
         padding: 10px;
     }
+    .resultDiv{
+        display: flex;
+        flex-direction: column;
+    }
 }

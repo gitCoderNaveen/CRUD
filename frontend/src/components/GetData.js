@@ -4,12 +4,13 @@ import '../CSS/application.css'
 export default function GetData() {
   const [product, setProduct] = useState('')
   const [firmDetails, setFirmDetails] = useState([])
+  const [ispopup, setIspopup] = useState(true)
 
   const fetchFirmDetails = async (e) => {
     e.preventDefault()
     if (product !== ' ')
       try {
-        const response = await fetch(`http://localhost:4001/industrials/get?product=${product}`);
+        const response = await fetch(`https://crud-elpu.onrender.com/industrials/get?product=${product}`);
         const data = await response.json();
         if (response.ok) {
           setFirmDetails(data);
@@ -19,6 +20,7 @@ export default function GetData() {
       } catch (error) {
         console.error('Error fetching firm details:', error);
       }
+      setIspopup(true)
   };
 
   const handleChange = (e) => {
@@ -26,7 +28,7 @@ export default function GetData() {
   }
 
   const handleClose =(e)=>{
-    window.location.reload()
+    setIspopup(!ispopup)
   }
   return (
     <div className='resultDiv'>
@@ -41,7 +43,7 @@ export default function GetData() {
       </div>
 
       <div className='detailsDiv'>
-        {firmDetails.sort().length > 0 ? (
+        {ispopup&&firmDetails.sort().length > 0 ? (
           <div className='textDiv'>
             <h2 >{product}</h2>
             {firmDetails.map((firm, index) => (
