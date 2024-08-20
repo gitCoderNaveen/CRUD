@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Division */
+.navbarDiv{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    background-color: #063970;
+}
+.nav-text{
+    text-decoration: none;
+    color: white;
+}
+/* Application Division */
+.myContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #063970;
+    height: 100vh;
+}
+form{
+    padding: 10px;
+}
+.myForm{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row; 
+    justify-content: center;
+    gap: 1rem; 
+    margin: 10px auto;  
+}
+/* Result Division - Get data division */
+.resultDiv{
+    background-color: #063970;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: #fff;
+}
+.detailsDiv{
+    display: flex;
+    height: fit-content;
+    text-align: left;
+    padding: 12px;
+}
+.detailsDiv h2{
+    background-color: #000;
+    padding: .5rem;
+    font-size: 1.5rem;
+    border-radius: 20px;
+}
+.productName{
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+.detailsSubDiv{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.additionDiv{
+    display: flex;
+    direction: column;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+
+/* Small devices (phones, 600px and below) */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+    .container {
+        padding: 10px;
+    }
+}
